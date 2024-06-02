@@ -14,7 +14,7 @@ function App() {
     setInput("");
     }
   }
-  const handleDelete = (i) =>{
+  const handleDelete = (index) =>{
            const filterList = list.filter((_, i) => i !== index);
     setList(filterList)
   }
@@ -28,7 +28,7 @@ function App() {
         </div>
         <div className="list">
           <ul>
-            {list.map((item, i)=><li key={i}>{item}<span id='removeBtn' onClick={()=>handleDelete(i)}>X</span></li>)}
+            {list.map((item, index)=><li key={index}>{item}<span id='removeBtn' onClick={()=>handleDelete(index)}>X</span></li>)}
           </ul>
         </div>
       </div>
