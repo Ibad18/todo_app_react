@@ -15,7 +15,7 @@ function App() {
     }
   }
   const handleDelete = (i) =>{
-    const filterList = list.filter((elm)=>elm != list[i]);
+           const filterList = list.filter((_, i) => i !== index);
     setList(filterList)
   }
 
